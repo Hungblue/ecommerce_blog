@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\CategoryController;
-use App\Http\Controllers\Admin\FrontendController;
+use App\Http\Controllers\Frontend\FrontendController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +17,11 @@ use App\Http\Controllers\Admin\FrontendController;
 |
 */
 
-Route::get('', function () {
+// Route::get('', function () {
 
-});
+// });
+
+Route::get('/', [FrontendController::class, 'index']);
 
 Auth::routes();
 
@@ -40,6 +42,27 @@ Route::middleware(['auth','isAdmin'])->group(function () {
     Route::get('/edit-product/{id}', [ProductController::class, 'edit']);
     Route::put('/update-product/{id}', [ProductController::class, 'update']);
     Route::get('/delete/{id}', [ProductController::class, 'delete']);
+});
+
+Route::middleware(['auth'])->group(function() {
+    Route::get('/products', function (){
+        return view('frontend.product');
+    });
+    Route::get('/products2', function (){
+        return view('frontend.product2');
+    });
+    Route::get('/single', function (){
+        return view('frontend.single');
+    });
+    Route::get('/single2', function (){
+        return view('frontend.single2');
+    });
+    Route::get('/checkout', function (){
+        return view('frontend.checkout');
+    });
+    Route::get('/about', function (){
+        return view('frontend.about');
+    });
 });
 
 
