@@ -6,6 +6,7 @@ use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\File;
 
 class ProductController extends Controller
 {
@@ -16,7 +17,7 @@ class ProductController extends Controller
     }
 
     public function add(){
-        $categories = Category::all();
+        $categories = Category::all()->load('products');
         return view('admin.product.add', compact('categories'));
     }
 
@@ -52,51 +53,58 @@ class ProductController extends Controller
         return redirect('/products')->with('status', "Product Added Successfully");
     }
 
-    // public function edit($id) {
-    //     $category = Category::findOrFail($id);
-    //     return view('admin.category.edit', compact('category'));
-    // }
+    public function edit($id) {
+        $categories = Category::all();
+        $product = Product::findOrFail($id);
+        return view('admin.product.edit', compact('categories', 'product'));
+    }
 
-    // public function update(Request $request, $id) 
-    // {
-    //     $category = Category::findOrFail($id);
+    public function update(Request $request, $id) 
+    {
+        $product = Product::findOrFail($id);
         
-    //     if($request->hasFile('image'))
-    //     {
-    //         $path = 'assets/uploads/category/'.$category->image;
-    //         if(File::exists($path))
-    //         {
-    //             File::delete($path);
-    //         }
-    //         $file = $request->file('image');
-    //         $ext = $file->getClientOriginalExtension();
-    //         $filename = time() . '.' . $ext;
-    //         $file->move('assets/uploads/category',$filename);
-    //         $category->image = $filename;
-    //     }
+        if($request->hasFile('image'))
+        {
+            $path = 'assets/uploads/product/'.$product->image;
+            if(File::exists($path))
+            {
+                File::delete($path);
+            }
+            $file = $request->file('image');
+            $ext = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $ext;
+            $file->move('assets/uploads/product',$filename);
+            $product->image = $filename;
+        }
     
-    //     $category->name = $request->input('name');
-    //     $category->slug = $request->input('slug');
-    //     $category->description = $request->input('description');
-    //     $category->status = $request->input('status') == TRUE ? 1 : 0;
-    //     $category->popular = $request->input('popular') == TRUE ? 1 : 0;
-    //     $category->meta_title = $request->input('meta_title');
-    //     $category->meta_descrip = $request->input('meta_descrip');
-    //     $category->meta_keywords = $request->input('meta_keywords');
-    //     $category->update();
+        $product->cate_id = $request->input('cate_id');
+        $product->name = $request->input('name');
+        $product->slug = $request->input('slug');
+        $product->small_description = $request->input('small_description');
+        $product->description = $request->input('description');
+        $product->original_price = $request->input('original_price');
+        $product->selling_price = $request->input('selling_price');
+        $product->qty = $request->input('qty');
+        $product->tax = $request->input('tax');
+        $product->status = $request->input('status') == TRUE ? 1 : 0;
+        $product->trending = $request->input('trending') == TRUE ? 1 : 0;
+        $product->meta_title = $request->input('meta_title');
+        $product->meta_descrip = $request->input('meta_descrip');
+        $product->meta_keywords = $request->input('meta_keywords');
+        $product->update();
 
-    //     return redirect('/categories')->with('status', "Category Updated Successfully");
-    // }
+        return redirect('/products')->with('status', "Product Updated Successfully");
+    }
 
-    // public function delete($id)
-    // {
-    //     $category = Category::findOrFail($id);
-    //     $path = 'assets/uploads/category/'.$category->image;
-    //     if(File::exists($path))
-    //     {
-    //         File::delete($path);
-    //     }
-    //     $category->delete();
-    //     return redirect('/categories');
-    // }
+    public function delete($id)
+    {
+        $product = Product::findOrFail($id);
+        $path = 'assets/uploads/product/'.$product->image;
+        if(File::exists($path))
+        {
+            File::delete($path);
+        }
+        $product->delete();
+        return redirect('/products');
+    }
 }
