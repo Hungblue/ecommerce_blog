@@ -63,6 +63,24 @@ Route::middleware(['auth'])->group(function() {
     Route::get('/about', function (){
         return view('frontend.about');
     });
+    Route::get('/contact', function (){
+        return view('frontend.contact');
+    });
+    Route::get('/faqs', function (){
+        return view('frontend.faqs');
+    });
+    Route::get('/help', function (){
+        return view('frontend.help');
+    });
+    Route::get('/privacy', function (){
+        return view('frontend.privacy');
+    });
+    Route::get('/term', function (){
+        return view('frontend.term');
+    });
+    Route::get('/payment', function (){
+        return view('frontend.payment');
+    });
 });
 
 

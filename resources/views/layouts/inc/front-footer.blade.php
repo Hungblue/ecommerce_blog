@@ -81,22 +81,22 @@
           <h3 class="text-white font-weight-bold mb-3">Quick Links</h3>
           <ul>
             <li class="mb-3">
-              <a href="about.html">About Us</a>
+              <a href="/about">About Us</a>
             </li>
             <li class="mb-3">
-              <a href="contact.html">Contact Us</a>
+              <a href="/contact">Contact Us</a>
             </li>
             <li class="mb-3">
-              <a href="help.html">Help</a>
+              <a href="/help">Help</a>
             </li>
             <li class="mb-3">
-              <a href="faqs.html">Faqs</a>
+              <a href="/faqs">Faqs</a>
             </li>
             <li class="mb-3">
-              <a href="terms.html">Terms of use</a>
+              <a href="/term">Terms of use</a>
             </li>
             <li>
-              <a href="privacy.html">Privacy Policy</a>
+              <a href="/privacy">Privacy Policy</a>
             </li>
           </ul>
         </div>
