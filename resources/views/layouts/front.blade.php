@@ -67,6 +67,7 @@
     swal("{{ session('status') }}");
   </script>
   @endif
+	
   @yield('scripts')
   
   <script src="{{ asset('frontend/js/bootstrap.bundle.min.js') }}"></script>
