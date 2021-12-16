@@ -18,7 +18,7 @@
               <span>Big</span>
               Sale
             </h3>
-            <a class="button2" href="product.html">Shop Now </a>
+            <a class="button2" href="/product">Shop Now </a>
           </div>
         </div>
       </div>
@@ -32,7 +32,7 @@
             <h3 class="font-weight-bold pt-2 pb-lg-5 pb-4">Best
               <span>Headphone</span>
             </h3>
-            <a class="button2" href="product.html">Shop Now </a>
+            <a class="button2" href="/product">Shop Now </a>
           </div>
         </div>
       </div>
@@ -46,7 +46,7 @@
             <h3 class="font-weight-bold pt-2 pb-lg-5 pb-4">New
               <span>Standard</span>
             </h3>
-            <a class="button2" href="product.html">Shop Now </a>
+            <a class="button2" href="/product">Shop Now </a>
           </div>
         </div>
       </div>
@@ -60,7 +60,7 @@
             <h3 class="font-weight-bold pt-2 pb-lg-5 pb-4">Today
               <span>Discount</span>
             </h3>
-            <a class="button2" href="product.html">Shop Now </a>
+            <a class="button2" href="/product">Shop Now </a>
           </div>
         </div>
       </div>

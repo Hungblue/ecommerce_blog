@@ -27,13 +27,13 @@ Welcome to Shop
                     <img src="{{ asset('frontend/images/m4.jpg') }}" alt="">
                     <div class="men-cart-pro">
                       <div class="inner-men-cart-pro">
-                        <a href="single.html" class="link-product-add-cart">Quick View</a>
+                        <a href="single" class="link-product-add-cart">Quick View</a>
                       </div>
                     </div>
                   </div>
                   <div class="item-info-product text-center border-top mt-4">
                     <h4 class="pt-1">
-                      <a href="single.html">Sony 80 cm (32 inches)</a>
+                      <a href="single">Sony 80 cm (32 inches)</a>
                     </h4>
                     <div class="info-product-price my-2">
                       <span class="item_price">$320.00</span>
@@ -65,7 +65,7 @@ Welcome to Shop
                     <img src="{{ asset('frontend/images/m5.jpg') }}" alt="">
                     <div class="men-cart-pro">
                       <div class="inner-men-cart-pro">
-                        <a href="single.html" class="link-product-add-cart">Quick View</a>
+                        <a href="single" class="link-product-add-cart">Quick View</a>
                       </div>
                     </div>
                     <span class="product-new-top">New</span>
@@ -73,7 +73,7 @@ Welcome to Shop
                   </div>
                   <div class="item-info-product text-center border-top mt-4">
                     <h4 class="pt-1">
-                      <a href="single.html">Artis Speaker</a>
+                      <a href="single">Artis Speaker</a>
                     </h4>
                     <div class="info-product-price my-2">
                       <span class="item_price">$349.00</span>
@@ -105,13 +105,13 @@ Welcome to Shop
                     <img src="{{ asset('frontend/images/m6.jpg') }}" alt="">
                     <div class="men-cart-pro">
                       <div class="inner-men-cart-pro">
-                        <a href="single.html" class="link-product-add-cart">Quick View</a>
+                        <a href="single" class="link-product-add-cart">Quick View</a>
                       </div>
                     </div>
                   </div>
                   <div class="item-info-product text-center border-top mt-4">
                     <h4 class="pt-1">
-                      <a href="single.html">Philips Speakers</a>
+                      <a href="single">Philips Speakers</a>
                     </h4>
                     <div class="info-product-price my-2">
                       <span class="item_price">$249.00</span>
@@ -148,14 +148,14 @@ Welcome to Shop
                     <img src="{{ asset('frontend/images/m7.jpg') }}" alt="">
                     <div class="men-cart-pro">
                       <div class="inner-men-cart-pro">
-                        <a href="single.html" class="link-product-add-cart">Quick View</a>
+                        <a href="single" class="link-product-add-cart">Quick View</a>
                       </div>
                     </div>
                   </div>
                   <span class="product-new-top">New</span>
                   <div class="item-info-product text-center border-top mt-4">
                     <h4 class="pt-1">
-                      <a href="single.html">Whirlpool 245</a>
+                      <a href="single">Whirlpool 245</a>
                     </h4>
                     <div class="info-product-price my-2">
                       <span class="item_price">$230.00</span>
@@ -187,13 +187,13 @@ Welcome to Shop
                     <img src="{{ asset('frontend/images/m8.jpg') }}" alt="">
                     <div class="men-cart-pro">
                       <div class="inner-men-cart-pro">
-                        <a href="single.html" class="link-product-add-cart">Quick View</a>
+                        <a href="single" class="link-product-add-cart">Quick View</a>
                       </div>
                     </div>
                   </div>
                   <div class="item-info-product text-center border-top mt-4">
                     <h4 class="pt-1">
-                      <a href="single.html">BPL Washing Machine</a>
+                      <a href="single">BPL Washing Machine</a>
                     </h4>
                     <div class="info-product-price my-2">
                       <span class="item_price">$180.00</span>
@@ -225,13 +225,13 @@ Welcome to Shop
                     <img src="{{ asset('frontend/images/m9.jpg') }}" alt="">
                     <div class="men-cart-pro">
                       <div class="inner-men-cart-pro">
-                        <a href="single.html" class="link-product-add-cart">Quick View</a>
+                        <a href="single" class="link-product-add-cart">Quick View</a>
                       </div>
                     </div>
                   </div>
                   <div class="item-info-product text-center border-top mt-4">
                     <h4 class="pt-1">
-                      <a href="single.html">Microwave Oven</a>
+                      <a href="single">Microwave Oven</a>
                     </h4>
                     <div class="info-product-price my-2">
                       <span class="item_price">$199.00</span>
@@ -268,13 +268,13 @@ Welcome to Shop
                     <img src="{{ asset('frontend/images/mm1.jpg') }}" alt="" class="img-fluid">
                     <div class="men-cart-pro">
                       <div class="inner-men-cart-pro">
-                        <a href="single.html" class="link-product-add-cart">Quick View</a>
+                        <a href="single" class="link-product-add-cart">Quick View</a>
                       </div>
                     </div>
                   </div>
                   <div class="item-info-product text-center border-top mt-4">
                     <h4 class="pt-1">
-                      <a href="single.html">boAt Rockerz Headset</a>
+                      <a href="single">boAt Rockerz Headset</a>
                     </h4>
                     <div class="info-product-price my-2">
                       <span class="item_price">$320.00</span>
@@ -307,13 +307,13 @@ Welcome to Shop
                     <img src="{{ asset('frontend/images/mm2.jpg') }}" alt="" class="img-fluid">
                     <div class="men-cart-pro">
                       <div class="inner-men-cart-pro">
-                        <a href="single.html" class="link-product-add-cart">Quick View</a>
+                        <a href="single" class="link-product-add-cart">Quick View</a>
                       </div>
                     </div>
                   </div>
                   <div class="item-info-product text-center border-top mt-4">
                     <h4 class="pt-1">
-                      <a href="single.html">LG Boom Blast Speaker</a>
+                      <a href="single">LG Boom Blast Speaker</a>
                     </h4>
                     <div class="info-product-price my-2">
                       <span class="item_price">$180.00</span>
@@ -346,13 +346,13 @@ Welcome to Shop
                     <img src="{{ asset('frontend/images/mm3.jpg') }}" alt="" class="img-fluid">
                     <div class="men-cart-pro">
                       <div class="inner-men-cart-pro">
-                        <a href="single.html" class="link-product-add-cart">Quick View</a>
+                        <a href="single" class="link-product-add-cart">Quick View</a>
                       </div>
                     </div>
                   </div>
                   <div class="item-info-product text-center border-top mt-4">
                     <h4 class="pt-1">
-                      <a href="single.html">Nikon Camera</a>
+                      <a href="single">Nikon Camera</a>
                     </h4>
                     <div class="info-product-price my-2">
                       <span class="item_price">$230.00</span>
@@ -389,13 +389,13 @@ Welcome to Shop
                     <img src="{{ asset('frontend/images/mm4.jpg') }}" alt="" class="img-fluid">
                     <div class="men-cart-pro">
                       <div class="inner-men-cart-pro">
-                        <a href="single.html" class="link-product-add-cart">Quick View</a>
+                        <a href="single" class="link-product-add-cart">Quick View</a>
                       </div>
                     </div>
                   </div>
                   <div class="item-info-product text-center border-top mt-4">
                     <h4 class="pt-1">
-                      <a href="single.html">Dry Iron</a>
+                      <a href="single">Dry Iron</a>
                     </h4>
                     <div class="info-product-price my-2">
                       <span class="item_price">$449.00</span>
@@ -428,13 +428,13 @@ Welcome to Shop
                     <img src="{{ asset('frontend/images/mm6.jpg') }}" alt="" class="img-fluid">
                     <div class="men-cart-pro">
                       <div class="inner-men-cart-pro">
-                        <a href="single.html" class="link-product-add-cart">Quick View</a>
+                        <a href="single" class="link-product-add-cart">Quick View</a>
                       </div>
                     </div>
                   </div>
                   <div class="item-info-product text-center border-top mt-4">
                     <h4 class="pt-1">
-                      <a href="single.html">Induction Cooktop</a>
+                      <a href="single">Induction Cooktop</a>
                     </h4>
                     <div class="info-product-price my-2">
                       <span class="item_price">$145.00</span>
@@ -465,14 +465,14 @@ Welcome to Shop
                     <img src="{{ asset('frontend/images/mm5.jpg') }}" alt="" class="img-fluid">
                     <div class="men-cart-pro">
                       <div class="inner-men-cart-pro">
-                        <a href="single.html" class="link-product-add-cart">Quick View</a>
+                        <a href="single" class="link-product-add-cart">Quick View</a>
                       </div>
                     </div>
                   </div>
                   <span class="product-new-top">New</span>
                   <div class="item-info-product text-center border-top mt-4">
                     <h4 class="pt-1">
-                      <a href="single.html">Hair Straightener</a>
+                      <a href="single">Hair Straightener</a>
                     </h4>
                     <div class="info-product-price my-2">
                       <span class="item_price">$499.00</span>

@@ -48,6 +48,9 @@ Route::middleware(['auth'])->group(function() {
     Route::get('/products', function (){
         return view('frontend.product');
     });
+    Route::get('/index', function (){
+        return view('frontend.index');
+    });
     Route::get('/products2', function (){
         return view('frontend.product2');
     });

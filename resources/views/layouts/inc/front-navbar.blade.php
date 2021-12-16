@@ -109,31 +109,31 @@
                   <div class="col-sm-6 multi-gd-img">
                     <ul class="multi-column-dropdown">
                       <li>
-                        <a href="product2.html">Televisions</a>
+                        <a href="/products2">Televisions</a>
                       </li>
                       <li>
-                        <a href="product2.html">Home Entertainment Systems</a>
+                        <a href="/products2">Home Entertainment Systems</a>
                       </li>
                       <li>
-                        <a href="product2.html">Headphones</a>
+                        <a href="/products2">Headphones</a>
                       </li>
                       <li>
-                        <a href="product2.html">Speakers</a>
+                        <a href="/products2">Speakers</a>
                       </li>
                       <li>
-                        <a href="product2.html">MP3, Media Players & Accessories</a>
+                        <a href="/products2">MP3, Media Players & Accessories</a>
                       </li>
                       <li>
-                        <a href="product2.html">Audio & Video Accessories</a>
+                        <a href="/products2">Audio & Video Accessories</a>
                       </li>
                       <li>
-                        <a href="product2.html">Cameras</a>
+                        <a href="/products2">Cameras</a>
                       </li>
                       <li>
-                        <a href="product2.html">DSLR Cameras</a>
+                        <a href="/products2">DSLR Cameras</a>
                       </li>
                       <li>
-                        <a href="product2.html">Camera Accessories</a>
+                        <a href="/products2">Camera Accessories</a>
                       </li>
                     </ul>
                   </div>

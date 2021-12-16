@@ -56,22 +56,22 @@
           <h3 class="text-white font-weight-bold mb-3">Categories</h3>
           <ul>
             <li class="mb-3">
-              <a href="product.html">Mobiles </a>
+              <a href="/product">Mobiles </a>
             </li>
             <li class="mb-3">
-              <a href="product.html">Computers</a>
+              <a href="/product">Computers</a>
             </li>
             <li class="mb-3">
-              <a href="product.html">TV, Audio</a>
+              <a href="/product">TV, Audio</a>
             </li>
             <li class="mb-3">
-              <a href="product2.html">Smartphones</a>
+              <a href="/products2">Smartphones</a>
             </li>
             <li class="mb-3">
-              <a href="product.html">Washing Machines</a>
+              <a href="/product">Washing Machines</a>
             </li>
             <li>
-              <a href="product2.html">Refrigerators</a>
+              <a href="/products2">Refrigerators</a>
             </li>
           </ul>
         </div>
@@ -169,34 +169,34 @@
         <h5 class="font-weight-bold mb-2">Mobile & Tablets :</h5>
         <ul>
           <li class="m-sm-1">
-            <a href="product.html" class="border-right pr-2">Android Phones</a>
+            <a href="/product" class="border-right pr-2">Android Phones</a>
           </li>
           <li class="m-sm-1">
-            <a href="product.html" class="border-right pr-2">Smartphones</a>
+            <a href="/product" class="border-right pr-2">Smartphones</a>
           </li>
           <li class="m-sm-1">
-            <a href="product.html" class="border-right pr-2">Feature Phones</a>
+            <a href="/product" class="border-right pr-2">Feature Phones</a>
           </li>
           <li class="m-sm-1">
-            <a href="product.html" class="border-right pr-2">Unboxed Phones</a>
+            <a href="/product" class="border-right pr-2">Unboxed Phones</a>
           </li>
           <li class="m-sm-1">
-            <a href="product.html" class="border-right pr-2">Refurbished Phones</a>
+            <a href="/product" class="border-right pr-2">Refurbished Phones</a>
           </li>
           <li class="m-sm-1">
-            <a href="product.html" class="border-right pr-2"> Tablets</a>
+            <a href="/product" class="border-right pr-2"> Tablets</a>
           </li>
           <li class="m-sm-1">
-            <a href="product.html" class="border-right pr-2">CDMA Phones</a>
+            <a href="/product" class="border-right pr-2">CDMA Phones</a>
           </li>
           <li class="m-sm-1">
-            <a href="product.html" class="border-right pr-2">Value Added Services</a>
+            <a href="/product" class="border-right pr-2">Value Added Services</a>
           </li>
           <li class="m-sm-1">
-            <a href="product.html" class="border-right pr-2">Sell Old</a>
+            <a href="/product" class="border-right pr-2">Sell Old</a>
           </li>
           <li class="m-sm-1">
-            <a href="product.html" class="border-right pr-2">Used Mobiles</a>
+            <a href="/product" class="border-right pr-2">Used Mobiles</a>
           </li>
         </ul>
       </div>
@@ -204,31 +204,31 @@
         <h5 class="font-weight-bold mb-2">Computers :</h5>
         <ul>
           <li class="m-sm-1">
-            <a href="product.html" class="border-right pr-2">Laptops </a>
+            <a href="/product" class="border-right pr-2">Laptops </a>
           </li>
           <li class="m-sm-1">
-            <a href="product.html" class="border-right pr-2">Printers</a>
+            <a href="/product" class="border-right pr-2">Printers</a>
           </li>
           <li class="m-sm-1">
-            <a href="product.html" class="border-right pr-2">Routers</a>
+            <a href="/product" class="border-right pr-2">Routers</a>
           </li>
           <li class="m-sm-1">
-            <a href="product.html" class="border-right pr-2">Ink & Toner Cartridges</a>
+            <a href="/product" class="border-right pr-2">Ink & Toner Cartridges</a>
           </li>
           <li class="m-sm-1">
-            <a href="product.html" class="border-right pr-2">Monitors</a>
+            <a href="/product" class="border-right pr-2">Monitors</a>
           </li>
           <li class="m-sm-1">
-            <a href="product.html" class="border-right pr-2">Video Games</a>
+            <a href="/product" class="border-right pr-2">Video Games</a>
           </li>
           <li class="m-sm-1">
-            <a href="product.html" class="border-right pr-2">Unboxed & Refurbished Laptops</a>
+            <a href="/product" class="border-right pr-2">Unboxed & Refurbished Laptops</a>
           </li>
           <li>
-            <a href="product.html" class="border-right pr-2">Assembled Desktops</a>
+            <a href="/product" class="border-right pr-2">Assembled Desktops</a>
           </li>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2">Data Cards</a>
+            <a href="/products2" class="border-right pr-2">Data Cards</a>
           </li>
         </ul>
       </div>
@@ -236,28 +236,28 @@
         <h5 class="font-weight-bold mb-2">TV, Audio & Large Appliances :</h5>
         <ul>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2">TVs & DTH</a>
+            <a href="/products2" class="border-right pr-2">TVs & DTH</a>
           </li>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2">Home Theatre Systems</a>
+            <a href="/products2" class="border-right pr-2">Home Theatre Systems</a>
           </li>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2">Hidden Cameras & CCTVs</a>
+            <a href="/products2" class="border-right pr-2">Hidden Cameras & CCTVs</a>
           </li>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2">Refrigerators</a>
+            <a href="/products2" class="border-right pr-2">Refrigerators</a>
           </li>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2">Washing Machines</a>
+            <a href="/products2" class="border-right pr-2">Washing Machines</a>
           </li>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2"> Air Conditioners</a>
+            <a href="/products2" class="border-right pr-2"> Air Conditioners</a>
           </li>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2">Cameras</a>
+            <a href="/products2" class="border-right pr-2">Cameras</a>
           </li>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2">Speakers</a>
+            <a href="/products2" class="border-right pr-2">Speakers</a>
           </li>
         </ul>
       </div>
@@ -265,31 +265,31 @@
         <h5 class="font-weight-bold mb-2">Mobile & Laptop Accessories :</h5>
         <ul>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2">Headphones</a>
+            <a href="/products2" class="border-right pr-2">Headphones</a>
           </li>
           <li class="m-sm-1">
-            <a href="product.html" class="border-right pr-2">Power Banks </a>
+            <a href="/product" class="border-right pr-2">Power Banks </a>
           </li>
           <li class="m-sm-1">
-            <a href="product.html" class="border-right pr-2">Backpacks</a>
+            <a href="/product" class="border-right pr-2">Backpacks</a>
           </li>
           <li class="m-sm-1">
-            <a href="product.html" class="border-right pr-2">Mobile Cases & Covers</a>
+            <a href="/product" class="border-right pr-2">Mobile Cases & Covers</a>
           </li>
           <li class="m-sm-1">
-            <a href="product.html" class="border-right pr-2">Pen Drives</a>
+            <a href="/product" class="border-right pr-2">Pen Drives</a>
           </li>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2">External Hard Disks</a>
+            <a href="/products2" class="border-right pr-2">External Hard Disks</a>
           </li>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2"> Mouse</a>
+            <a href="/products2" class="border-right pr-2"> Mouse</a>
           </li>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2">Smart Watches & Fitness Bands</a>
+            <a href="/products2" class="border-right pr-2">Smart Watches & Fitness Bands</a>
           </li>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2">MicroSD Cards</a>
+            <a href="/products2" class="border-right pr-2">MicroSD Cards</a>
           </li>
         </ul>
       </div>
@@ -297,31 +297,31 @@
         <h5 class="font-weight-bold mb-2">Appliances :</h5>
         <ul>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2">Trimmers</a>
+            <a href="/products2" class="border-right pr-2">Trimmers</a>
           </li>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2">Hair Dryers</a>
+            <a href="/products2" class="border-right pr-2">Hair Dryers</a>
           </li>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2">Emergency Lights</a>
+            <a href="/products2" class="border-right pr-2">Emergency Lights</a>
           </li>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2">Water Purifiers </a>
+            <a href="/products2" class="border-right pr-2">Water Purifiers </a>
           </li>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2">Electric Kettles</a>
+            <a href="/products2" class="border-right pr-2">Electric Kettles</a>
           </li>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2">Hair Straighteners</a>
+            <a href="/products2" class="border-right pr-2">Hair Straighteners</a>
           </li>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2">Induction Cooktops</a>
+            <a href="/products2" class="border-right pr-2">Induction Cooktops</a>
           </li>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2">Sewing Machines</a>
+            <a href="/products2" class="border-right pr-2">Sewing Machines</a>
           </li>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2"> Geysers</a>
+            <a href="/products2" class="border-right pr-2"> Geysers</a>
           </li>
         </ul>
       </div>
@@ -329,43 +329,43 @@
         <h5 class="font-weight-bold mb-2">Popular on Electro Store</h5>
         <ul>
           <li class="m-sm-1">
-            <a href="product.html" class="border-right pr-2">Offers & Coupons</a>
+            <a href="product" class="border-right pr-2">Offers & Coupons</a>
           </li>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2">Couple Watches</a>
+            <a href="/products2" class="border-right pr-2">Couple Watches</a>
           </li>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2">Gas Stoves</a>
+            <a href="/products2" class="border-right pr-2">Gas Stoves</a>
           </li>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2"> Air Coolers</a>
+            <a href="/products2" class="border-right pr-2"> Air Coolers</a>
           </li>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2">Air Purifiers</a>
+            <a href="/products2" class="border-right pr-2">Air Purifiers</a>
           </li>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2">Headphones</a>
+            <a href="/products2" class="border-right pr-2">Headphones</a>
           </li>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2"> Headsets</a>
+            <a href="/products2" class="border-right pr-2"> Headsets</a>
           </li>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2">Pressure Cookers</a>
+            <a href="/products2" class="border-right pr-2">Pressure Cookers</a>
           </li>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2">Sandwich Makers</a>
+            <a href="/products2" class="border-right pr-2">Sandwich Makers</a>
           </li>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2">Air Friers</a>
+            <a href="/products2" class="border-right pr-2">Air Friers</a>
           </li>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2">Irons</a>
+            <a href="/products2" class="border-right pr-2">Irons</a>
           </li>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2">LED TV</a>
+            <a href="/products2" class="border-right pr-2">LED TV</a>
           </li>
           <li class="m-sm-1">
-            <a href="product2.html" class="border-right pr-2">Sandwich Makers</a>
+            <a href="/products2" class="border-right pr-2">Sandwich Makers</a>
           </li>
         </ul>
       </div>

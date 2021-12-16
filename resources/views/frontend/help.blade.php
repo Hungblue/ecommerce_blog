@@ -10,7 +10,7 @@ Welcome to Shop
     <div class="container">
       <ul class="w3_short">
         <li>
-          <a href="index.html">Home</a>
+          <a href="index">Home</a>
           <i>|</i>
         </li>
         <li>Help</li>

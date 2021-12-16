@@ -11,7 +11,7 @@
     <div class="container">
       <ul class="w3_short">
         <li>
-          <a href="index.html">Home</a>
+          <a href="index">Home</a>
           <i>|</i>
         </li>
         <li>Checkout</li>
@@ -49,7 +49,7 @@
             <tr class="rem1">
               <td class="invert">1</td>
               <td class="invert-image">
-                <a href="single.html">
+                <a href="single">
                   <img src="images/a.jpg" alt=" " class="img-responsive">
                 </a>
               </td>
@@ -75,7 +75,7 @@
             <tr class="rem2">
               <td class="invert">2</td>
               <td class="invert-image">
-                <a href="single2.html">
+                <a href="single2">
                   <img src="images/a4.jpg" alt=" " class="img-responsive">
                 </a>
               </td>
@@ -101,7 +101,7 @@
             <tr class="rem3">
               <td class="invert">3</td>
               <td class="invert-image">
-                <a href="single.html">
+                <a href="single">
                   <img src="images/a3.jpg" alt=" " class="img-responsive">
                 </a>
               </td>
@@ -131,7 +131,7 @@
     <div class="checkout-left">
       <div class="address_form_agile mt-sm-5 mt-4">
         <h4 class="mb-sm-4 mb-3">Add a new Details</h4>
-        <form action="payment.html" method="post" class="creditly-card-form agileinfo_form">
+        <form action="payment" method="post" class="creditly-card-form agileinfo_form">
           <div class="creditly-wrapper wthree, w3_agileits_wrapper">
             <div class="information-wrapper">
               <div class="first-row">
