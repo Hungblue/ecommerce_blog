@@ -22,6 +22,11 @@ use App\Http\Controllers\Frontend\FrontendController;
 // });
 
 Route::get('/', [FrontendController::class, 'index']);
+Route::get('/view-category/{slug}', [FrontendController::class, 'viewcategory']);
+Route::get('/category/{category_slug}/{product_slug}', [FrontendController::class, 'viewproduct']);
+
+
+
 
 Auth::routes();
 
@@ -45,7 +50,7 @@ Route::middleware(['auth','isAdmin'])->group(function () {
 });
 
 Route::middleware(['auth'])->group(function() {
-    Route::get('/products', function (){
+    Route::get('/product', function (){
         return view('frontend.product');
     });
     Route::get('/index', function (){
@@ -85,5 +90,3 @@ Route::middleware(['auth'])->group(function() {
         return view('frontend.payment');
     });
 });
-
-

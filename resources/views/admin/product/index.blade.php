@@ -31,7 +31,9 @@
             <td>{{ $product->original_price }}</td>
             <td>{{ $product->selling_price }}</td>
             <td>
-              <img class="cate-image" src="{{ asset('assets/uploads/product/'.$product->image) }}" alt="Image here">
+              <div>
+                <img class="cate-image" src="{{ asset('assets/uploads/product/'.$product->image) }}" alt="Image here">
+              </div>
             </td>
             <td>
               <a href="/edit-product/{{ $product->id }}" class="btn btn-primary">Edit</a>
