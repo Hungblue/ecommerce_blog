@@ -5,14 +5,14 @@
 @endsection
 
 @section('content')
+    <div class="py-3 mb-4 shadow-sm bg-warning border-top">
+        <div class="container">
+            <h6>Collections / {{ $category->name }}</h6>
+        </div>
+    </div>
     <!-- top Products -->
     <div class="ads-grid py-sm-5 py-4">
         <div class="container py-xl-4 py-lg-2">
-            <!-- tittle heading -->
-            <h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
-                <span>{{ $category->name }}</span>
-            </h3>
-            <!-- //tittle heading -->
             <div class="row">
                 <!-- product left -->
                 <div class="agileinfo-ads-display col-lg-9">
