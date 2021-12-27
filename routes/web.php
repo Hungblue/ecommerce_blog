@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\FrontendController as AdminFrontendController;
+use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\FrontendController;
 
 /*
@@ -31,7 +32,13 @@ Route::get('/category/{category_slug}/{product_slug}', [FrontendController::clas
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::post('add-to-cart', [CartController::class, 'addProduct']);
+
+Route::middleware('auth')->group(function () {
+
+});
 
 Route::middleware(['auth','isAdmin'])->group(function () {
     Route::get('/dashboard', [AdminFrontendController::class, 'index']);
@@ -50,44 +57,44 @@ Route::middleware(['auth','isAdmin'])->group(function () {
     Route::get('/delete/{id}', [ProductController::class, 'delete']);
 });
 
-Route::middleware(['auth'])->group(function() {
-    Route::get('/product', function (){
-        return view('frontend.product');
-    });
-    Route::get('/index', function (){
-        return view('frontend.index');
-    });
-    Route::get('/products2', function (){
-        return view('frontend.product2');
-    });
-    Route::get('/single', function (){
-        return view('frontend.single');
-    });
-    Route::get('/single2', function (){
-        return view('frontend.single2');
-    });
-    Route::get('/checkout', function (){
-        return view('frontend.checkout');
-    });
-    Route::get('/about', function (){
-        return view('frontend.about');
-    });
-    Route::get('/contact', function (){
-        return view('frontend.contact');
-    });
-    Route::get('/faqs', function (){
-        return view('frontend.faqs');
-    });
-    Route::get('/help', function (){
-        return view('frontend.help');
-    });
-    Route::get('/privacy', function (){
-        return view('frontend.privacy');
-    });
-    Route::get('/term', function (){
-        return view('frontend.term');
-    });
-    Route::get('/payment', function (){
-        return view('frontend.payment');
-    });
-});
+// Route::middleware(['auth'])->group(function() {
+//     Route::get('/product', function (){
+//         return view('frontend.product');
+//     });
+//     Route::get('/index', function (){
+//         return view('frontend.index');
+//     });
+//     Route::get('/products2', function (){
+//         return view('frontend.product2');
+//     });
+//     Route::get('/single', function (){
+//         return view('frontend.single');
+//     });
+//     Route::get('/single2', function (){
+//         return view('frontend.single2');
+//     });
+//     Route::get('/checkout', function (){
+//         return view('frontend.checkout');
+//     });
+//     Route::get('/about', function (){
+//         return view('frontend.about');
+//     });
+//     Route::get('/contact', function (){
+//         return view('frontend.contact');
+//     });
+//     Route::get('/faqs', function (){
+//         return view('frontend.faqs');
+//     });
+//     Route::get('/help', function (){
+//         return view('frontend.help');
+//     });
+//     Route::get('/privacy', function (){
+//         return view('frontend.privacy');
+//     });
+//     Route::get('/term', function (){
+//         return view('frontend.term');
+//     });
+//     Route::get('/payment', function (){
+//         return view('frontend.payment');
+//     });
+// });

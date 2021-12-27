@@ -54,6 +54,8 @@
 </head>
 
 <body>
+
+
     @include('layouts.inc.front-agile')
     @include('layouts.inc.front-modal')
     @include('layouts.inc.front-header-bot')
