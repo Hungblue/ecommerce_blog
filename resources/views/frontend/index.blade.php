@@ -5,6 +5,9 @@
 @endsection
 
 @section('content')
+
+    @include('layouts.inc.front-slider')
+
     <!-- top Products -->
     <div class="ads-grid py-sm-5 py-4">
         <div class="container py-xl-4 py-lg-2">
@@ -20,9 +23,10 @@
                 <div class="agileinfo-ads-display col-lg-12">
                     <div class="wrapper">
                         <!-- first section -->
-                        {{-- @for ($i = 1; $i <= $featured_categories->count(); $i++)
+                        @for ($i = 0; $i < $featured_categories->count(); $i++)
                             <div class="">
-                                <h3 class="heading-tittle text-center font-italic">Features Products</h3>
+                                <h3 class="heading-tittle text-center font-italic">{{ $featured_categories[$i]->name }}
+                                </h3>
                                 <div class="row">
                                     <div class="owl-carousel featured-theme owl-theme">
                                         @foreach ($featured_products[$i] as $item)
@@ -39,7 +43,7 @@
                                                                 </div>
                                                                 <div class="men-cart-pro">
                                                                     <div class="inner-men-cart-pro">
-                                                                        <a href="/single"
+                                                                        <a href="/category/{{ $featured_categories[$i]->slug }}/{{ $item->slug }}"
                                                                             class="link-product-add-cart">Quick
                                                                             View</a>
                                                                     </div>
@@ -63,182 +67,9 @@
                                     </div>
                                 </div>
                             </div>
-                        @endfor) --}}
+                        @endfor)
                         <!-- //first section -->>
-                        <!-- second section -->
-                        <div class="">
-                            <h3 class="heading-tittle text-center font-italic">Features Products</h3>
-                            <div class="row">
-                                <div class="owl-carousel featured-theme owl-theme">
-                                    @foreach ($featured_products[1] as $item)
-                                        <div class="item">
-                                            <div class="product-men mt-5">
-                                                <div class="men-pro-item simpleCart_shelfItem">
-                                                    <div class="men-thumb-item text-center">
-                                                        <div
-                                                            style="height: 250px; vertical-align: middle; display: table-cell;">
-                                                            <div>
-                                                                <img class=""
-                                                                    src="{{ asset('assets/uploads/product/' . $item->image) }}"
-                                                                    alt="image1">
-                                                            </div>
-                                                            <div class="men-cart-pro">
-                                                                <div class="inner-men-cart-pro">
-                                                                    <a href="/single" class="link-product-add-cart">Quick
-                                                                        View</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="item-info-product text-center border-top mt-4">
-                                                        <h4 class="pt-1">
-                                                            <a href="/single">{{ $item->name }}</a>
-                                                        </h4>
-                                                        <div class="info-product-price my-2">
-                                                            <span
-                                                                class="item_price">${{ $item->selling_price }}</span>
-                                                            <del></del>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                        </div>
-                        <!-- //second section -->
 
-                        {{-- third section --}}
-                        <div class="">
-                            <h3 class="heading-tittle text-center font-italic">Features Products</h3>
-                            <div class="row">
-                                <div class="owl-carousel featured-theme owl-theme">
-                                    @foreach ($featured_products[2] as $item)
-                                        <div class="item">
-                                            <div class="product-men mt-5">
-                                                <div class="men-pro-item simpleCart_shelfItem">
-                                                    <div class="men-thumb-item text-center">
-                                                        <div
-                                                            style="height: 250px; vertical-align: middle; display: table-cell;">
-                                                            <div>
-                                                                <img class=""
-                                                                    src="{{ asset('assets/uploads/product/' . $item->image) }}"
-                                                                    alt="image1">
-                                                            </div>
-                                                            <div class="men-cart-pro">
-                                                                <div class="inner-men-cart-pro">
-                                                                    <a href="/single" class="link-product-add-cart">Quick
-                                                                        View</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="item-info-product text-center border-top mt-4">
-                                                        <h4 class="pt-1">
-                                                            <a href="/single">{{ $item->name }}</a>
-                                                        </h4>
-                                                        <div class="info-product-price my-2">
-                                                            <span
-                                                                class="item_price">${{ $item->selling_price }}</span>
-                                                            <del></del>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                        </div>
-                        {{-- third section --}}
-                        {{-- fourth section --}}
-                        <div class="">
-                            <h3 class="heading-tittle text-center font-italic">Features Products</h3>
-                            <div class="row">
-                                <div class="owl-carousel featured-theme owl-theme">
-                                    @foreach ($featured_products[3] as $item)
-                                        <div class="item">
-                                            <div class="product-men mt-5">
-                                                <div class="men-pro-item simpleCart_shelfItem">
-                                                    <div class="men-thumb-item text-center">
-                                                        <div
-                                                            style="height: 250px; vertical-align: middle; display: table-cell;">
-                                                            <div>
-                                                                <img class=""
-                                                                    src="{{ asset('assets/uploads/product/' . $item->image) }}"
-                                                                    alt="image1">
-                                                            </div>
-                                                            <div class="men-cart-pro">
-                                                                <div class="inner-men-cart-pro">
-                                                                    <a href="/single" class="link-product-add-cart">Quick
-                                                                        View</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="item-info-product text-center border-top mt-4">
-                                                        <h4 class="pt-1">
-                                                            <a href="/single">{{ $item->name }}</a>
-                                                        </h4>
-                                                        <div class="info-product-price my-2">
-                                                            <span
-                                                                class="item_price">${{ $item->selling_price }}</span>
-                                                            <del></del>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                        </div>
-                        {{-- //fourth section --}}
-
-                        {{-- five sections --}}
-                        <div class="">
-                            <h3 class="heading-tittle text-center font-italic">Features Products</h3>
-                            <div class="row">
-                                <div class="owl-carousel featured-theme owl-theme">
-                                    @foreach ($featured_products[4] as $item)
-                                        <div class="item">
-                                            <div class="product-men mt-5">
-                                                <div class="men-pro-item simpleCart_shelfItem">
-                                                    <div class="men-thumb-item text-center">
-                                                        <div
-                                                            style="height: 250px; vertical-align: middle; display: table-cell;">
-                                                            <div>
-                                                                <img class=""
-                                                                    src="{{ asset('assets/uploads/product/' . $item->image) }}"
-                                                                    alt="image1">
-                                                            </div>
-                                                            <div class="men-cart-pro">
-                                                                <div class="inner-men-cart-pro">
-                                                                    <a href="/single" class="link-product-add-cart">Quick
-                                                                        View</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="item-info-product text-center border-top mt-4">
-                                                        <h4 class="pt-1">
-                                                            <a href="/single">{{ $item->name }}</a>
-                                                        </h4>
-                                                        <div class="info-product-price my-2">
-                                                            <span
-                                                                class="item_price">${{ $item->selling_price }}</span>
-                                                            <del></del>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                        </div>
-                        {{-- //five sections --}}
                     </div>
                 </div>
             </div>
@@ -251,9 +82,10 @@
     <script>
         $('.owl-carousel').owlCarousel({
             loop: true,
-            margin: 50,
+            margin: 30,
             nav: true,
             dots: false,
+            nav: false,
             responsive: {
                 0: {
                     items: 1

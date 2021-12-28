@@ -35,9 +35,10 @@ Auth::routes();
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::post('add-to-cart', [CartController::class, 'addProduct']);
+Route::post('delete-cart-item', [CartController::class, 'deleteProduct']);
 
 Route::middleware('auth')->group(function () {
-
+  Route::get('/cart', [CartController::class, 'viewcart']);
 });
 
 Route::middleware(['auth','isAdmin'])->group(function () {
@@ -73,9 +74,7 @@ Route::middleware(['auth','isAdmin'])->group(function () {
 //     Route::get('/single2', function (){
 //         return view('frontend.single2');
 //     });
-//     Route::get('/checkout', function (){
-//         return view('frontend.checkout');
-//     });
+    //Route::get('/checkout', [CartController::class, 'viewcart']);
 //     Route::get('/about', function (){
 //         return view('frontend.about');
 //     });

@@ -12,10 +12,10 @@ class FrontendController extends Controller
     public function index()
     {
       $featured_categories = Category::where('status', '1')->get();
-      for ($i=1; $i <= $featured_categories->count(); $i++) {
-        $featured_products[$i] = Product::where('cate_id', $i)->where('trending', '1')->where('status', '1')->take(15)->get();
+      for ($i=0; $i < $featured_categories->count(); $i++) {
+        $featured_products[$i] = Product::where('cate_id', $i+1)->where('trending', '1')->where('status', '1')->take(15)->get();
       }
-
+      //dd($featured_products);
       return view('frontend.index', compact('featured_products', 'featured_categories'));
     }
 

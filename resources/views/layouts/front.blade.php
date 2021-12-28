@@ -60,7 +60,7 @@
     @include('layouts.inc.front-modal')
     @include('layouts.inc.front-header-bot')
     @include('layouts.inc.front-navbar')
-    @include('layouts.inc.front-slider')
+
     <div id="app">
         <main class="py-4">
             @yield('content')
@@ -70,6 +70,7 @@
     @include('layouts.inc.front-footer')
     @include('layouts.inc.front-copy-right')
 
+
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     @if (session('status'))
         <script>
@@ -78,11 +79,10 @@
     @endif
 
     <script src="{{ asset('frontend/js/bootstrap.bundle.min.js') }}"></script>
-
     {{-- <script src="{{ asset('frontend/js/jquery-2.2.3.min.js') }}"></script> --}}
     <script src="{{ asset('frontend/js/jquery-3.6.0.min.js') }}"></script>
-
     <script src="{{ asset('frontend/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('frontend/js/cart.js') }}"></script>
 
 
 
