@@ -1,8 +1,22 @@
 .product-image {
+    height: 50%;
+    /* margin: auto; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-  height: 50%;
-  /* margin: auto; */
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.checkout-form label {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.checkout-form input {
+    font-size: 14px;
+    padding: 5px;
+    font-weight: 400;
 }

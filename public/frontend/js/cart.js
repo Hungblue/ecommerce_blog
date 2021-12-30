@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
     $('.addToCartBtn').click(function(e) {
         e.preventDefault();
@@ -49,26 +48,45 @@ $(document).ready(function() {
         }
     })
 
-  $('.delete-cart-item').click(function (e) {
-    e.preventDefault();
-
     $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-        });
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
 
-    var product_id = $(this).closest('.product_data').find('.prod_id').val();
-    $.ajax({
-      method: 'POST',
-      url: 'delete-cart-item',
-      data: {
-        'prod_id': product_id,
-      },
-      success: function (response) {
-        window.location.reload();
-        swal("", response.status, "success");
-      }
+    $('.delete-cart-item').click(function(e) {
+        e.preventDefault();
+
+
+
+        var product_id = $(this).closest('.product_data').find('.prod_id').val();
+        $.ajax({
+            method: 'POST',
+            url: 'delete-cart-item',
+            data: {
+                'prod_id': product_id,
+            },
+            success: function(response) {
+                window.location.reload();
+                swal("", response.status, "success");
+            }
+        })
     })
-  })
+
+    $('.changeQuantity').click(function(e) {
+        var prod_id = $(this).closest('.product_data').find('.prod_id').val();
+        var qty = $(this).closest('.product_data').find('.qty-input').val();
+
+        $.ajax({
+            method: 'POST',
+            url: 'update-cart',
+            data: {
+                'prod_id': prod_id,
+                'prod_qty': qty,
+            },
+            success: function(response) {
+                window.location.reload();
+            }
+        })
+    })
 })

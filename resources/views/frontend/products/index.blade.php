@@ -349,9 +349,9 @@
 @section('scripts')
     <script>
         $('.owl-carousel').owlCarousel({
-            loop: true,
+            loop: false,
             margin: 50,
-            nav: true,
+            nav: false,
             dots: false,
             responsive: {
                 0: {

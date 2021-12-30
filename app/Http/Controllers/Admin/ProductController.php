@@ -23,7 +23,7 @@ class ProductController extends Controller
 
     public function insert(Request $request)
     {
-        
+
         $product = new Product();
         //$product = $request->input();
         if($request->hasFile('image'))
@@ -33,7 +33,7 @@ class ProductController extends Controller
             $filename = time() . '.' . $ext;
             $file->move('assets/uploads/product',$filename);
             $product->image = $filename;
-        }              
+        }
         $product->cate_id = $request->input('cate_id');
         $product->name = $request->input('name');
         $product->slug = $request->input('slug');
@@ -49,6 +49,7 @@ class ProductController extends Controller
         $product->meta_descrip = $request->input('meta_descrip');
         $product->meta_keywords = $request->input('meta_keywords');
         $product->save();
+        
 
         return redirect('/products')->with('status', "Product Added Successfully");
     }
@@ -59,10 +60,10 @@ class ProductController extends Controller
         return view('admin.product.edit', compact('categories', 'product'));
     }
 
-    public function update(Request $request, $id) 
+    public function update(Request $request, $id)
     {
         $product = Product::findOrFail($id);
-        
+
         if($request->hasFile('image'))
         {
             $path = 'assets/uploads/product/'.$product->image;
@@ -76,7 +77,7 @@ class ProductController extends Controller
             $file->move('assets/uploads/product',$filename);
             $product->image = $filename;
         }
-    
+
         $product->cate_id = $request->input('cate_id');
         $product->name = $request->input('name');
         $product->slug = $request->input('slug');

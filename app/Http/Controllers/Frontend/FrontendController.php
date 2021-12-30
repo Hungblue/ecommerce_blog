@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 
 class FrontendController extends Controller
@@ -12,8 +13,8 @@ class FrontendController extends Controller
     public function index()
     {
       $featured_categories = Category::where('status', '1')->get();
-      for ($i=0; $i < $featured_categories->count(); $i++) {
-        $featured_products[$i] = Product::where('cate_id', $i+1)->where('trending', '1')->where('status', '1')->take(15)->get();
+      foreach ($featured_categories as $item) {
+        $featured_products[$item->name] = Product::where('cate_id', $item->id)->where('trending', '1')->where('status', '1')->take(15)->get();
       }
       //dd($featured_products);
       return view('frontend.index', compact('featured_products', 'featured_categories'));
@@ -58,6 +59,41 @@ class FrontendController extends Controller
       }
       else{
         return redirect('/')->with('status', 'No such category found');
+      }
+    }
+
+    public function search(Request $request){
+      if(isset($_GET['search']))
+      {
+        $featured_categories = Category::where('status', '1')->get();
+
+        $search_text = $_GET['search'];
+        if(Product::where('name','LIKE', '%'.$search_text.'%')->exists())
+        {
+          $products = Product::where('name','LIKE', '%'.$search_text.'%')->get();
+          return view('frontend.products.search', compact('products', 'featured_categories'));
+        }
+        else{
+          return redirect('/')->with('status', 'No products found');
+        }
+      }
+    }
+
+    public function search_category(Request $request){
+
+      if(isset($_GET['search_category']))
+      {
+        $featured_categories = Category::where('status', '1')->get();
+
+        $search_text = $_GET['search_category'];
+        if(Product::where('cate_id', $search_text)->exists())
+        {
+          $products = Product::where('cate_id', $search_text)->get();
+          return view('frontend.products.search', compact('products', 'featured_categories'));
+        }
+        else{
+          return redirect('/')->with('status', 'No products found');
+        }
       }
     }
 }

@@ -23,13 +23,13 @@
                 <div class="agileinfo-ads-display col-lg-12">
                     <div class="wrapper">
                         <!-- first section -->
-                        @for ($i = 0; $i < $featured_categories->count(); $i++)
+                        @foreach ($featured_products as $item_product)
                             <div class="">
-                                <h3 class="heading-tittle text-center font-italic">{{ $featured_categories[$i]->name }}
-                                </h3>
+                                {{-- <h3 class="heading-tittle text-center font-italic">{{ $featured_products }}
+                                </h3> --}}
                                 <div class="row">
                                     <div class="owl-carousel featured-theme owl-theme">
-                                        @foreach ($featured_products[$i] as $item)
+                                        @foreach ($item_product as $item)
                                             <div class="item">
                                                 <div class="product-men mt-5">
                                                     <div class="men-pro-item simpleCart_shelfItem">
@@ -43,7 +43,7 @@
                                                                 </div>
                                                                 <div class="men-cart-pro">
                                                                     <div class="inner-men-cart-pro">
-                                                                        <a href="/category/{{ $featured_categories[$i]->slug }}/{{ $item->slug }}"
+                                                                        <a href="/category/{{ $item->category->slug }}/{{ $item->slug }}"
                                                                             class="link-product-add-cart">Quick
                                                                             View</a>
                                                                     </div>
@@ -67,8 +67,8 @@
                                     </div>
                                 </div>
                             </div>
-                        @endfor)
-                        <!-- //first section -->>
+                        @endforeach
+                        <!-- //first section -->
 
                     </div>
                 </div>

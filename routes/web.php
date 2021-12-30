@@ -3,10 +3,11 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ProductController;
-use App\Http\Controllers\Admin\CategoryController;
-use App\Http\Controllers\Admin\FrontendController as AdminFrontendController;
 use App\Http\Controllers\Frontend\CartController;
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Frontend\CheckoutController;
 use App\Http\Controllers\Frontend\FrontendController;
+use App\Http\Controllers\Admin\FrontendController as AdminFrontendController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,8 @@ use App\Http\Controllers\Frontend\FrontendController;
 Route::get('/', [FrontendController::class, 'index']);
 Route::get('/view-category/{slug}', [FrontendController::class, 'viewcategory']);
 Route::get('/category/{category_slug}/{product_slug}', [FrontendController::class, 'viewproduct']);
+Route::get('/search', [FrontendController::class, 'search']);
+Route::get('/search_category', [FrontendController::class, 'search_category']);
 
 
 
@@ -36,9 +39,11 @@ Auth::routes();
 
 Route::post('add-to-cart', [CartController::class, 'addProduct']);
 Route::post('delete-cart-item', [CartController::class, 'deleteProduct']);
+Route::post('update-cart', [CartController::class, 'updateCart']);
 
 Route::middleware('auth')->group(function () {
   Route::get('/cart', [CartController::class, 'viewcart']);
+  Route::get('/checkout', [CheckoutController::class, 'index']);
 });
 
 Route::middleware(['auth','isAdmin'])->group(function () {

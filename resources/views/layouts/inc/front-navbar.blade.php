@@ -2,18 +2,16 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="agileits-navi_search">
-                <form action="#" method="post">
-                    <select id="agileinfo-nav_search" name="agileinfo_search" class="border" required="">
+                <form action="search_category" method="GET">
+                    <select id="agileinfo-nav_search" name="search_category" class="border" required=""
+                        onchange="this.form.submit()">
                         <option value="">All Categories</option>
-                        <option value="Televisions">Televisions</option>
-                        <option value="Headphones">Headphones</option>
-                        <option value="Computers">Computers</option>
-                        <option value="Appliances">Appliances</option>
-                        <option value="Mobiles">Mobiles</option>
-                        <option value="Fruits &amp; Vegetables">Tv &amp; Video</option>
-                        <option value="iPad & Tablets">iPad & Tablets</option>
-                        <option value="Cameras & Camcorders">Cameras & Camcorders</option>
-                        <option value="Home Audio & Theater">Home Audio & Theater</option>
+                        @foreach ($featured_categories as $cate)
+                            <li>
+                                <option value="{{ $cate->id }}">{{ $cate->name }}</option>
+                            </li>
+                        @endforeach
+
                     </select>
                 </form>
             </div>
@@ -48,7 +46,7 @@
                                                 </li>
                                             @endforeach
                                     </div>
-                                    <div class="col-sm-6 multi-gd-img">
+                                    {{-- <div class="col-sm-6 multi-gd-img">
                                         <ul class="multi-column-dropdown">
                                             <li>
                                                 <a href="/products">Laptops</a>
@@ -72,7 +70,7 @@
                                                 <a href="/products">Software</a>
                                             </li>
                                         </ul>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
