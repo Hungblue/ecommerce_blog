@@ -5,9 +5,9 @@
         <div class="join-agile text-left p-4">
           <div class="row">
             <div class="col-sm-7 offer-name">
-              <h6>Smooth, Rich & Loud Audio</h6>
-              <h4 class="mt-2 mb-3">Branded Headphones</h4>
-              <p>Sale up to 25% off all in store</p>
+              <h6>Âm thanh mượt mà, phong phú và to</h6>
+              <h4 class="mt-2 mb-3">Thương hiệu</h4>
+              <p>Giảm sốc 25%</p>
             </div>
             <div class="col-sm-5 offerimg-w3l">
               <img src="{{ asset('assets/uploads/product/off1.png') }}" alt="" class="img-fluid">
@@ -19,9 +19,9 @@
         <div class="join-agile text-left p-4">
           <div class="row ">
             <div class="col-sm-7 offer-name">
-              <h6>A Bigger Phone</h6>
-              <h4 class="mt-2 mb-3">Smart Phones 5</h4>
-              <p>Free shipping order over $100</p>
+              <h6>Iphone</h6>
+              <h4 class="mt-2 mb-3">Iphone 13</h4>
+              <p>Miễn phí giao hàng trên 2.000.000 đ</p>
             </div>
             <div class="col-sm-5 offerimg-w3l">
               <img src="{{ asset('assets/uploads/product/off2.png') }}" alt="" class="img-fluid">

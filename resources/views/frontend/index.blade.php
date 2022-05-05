@@ -1,7 +1,8 @@
 @extends('layouts.front')
 
 @section('title')
-    Welcome to Shop
+@section('title')
+    E-Shop chào mừng bạn
 @endsection
 
 @section('content')
@@ -13,9 +14,9 @@
         <div class="container py-xl-4 py-lg-2">
             <!-- tittle heading -->
             <h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
-                <span>O</span>ur
-                <span>N</span>ew
-                <span>P</span>roducts
+                <span>S</span>ản
+                <span>P</span>hẩm
+                <span>M</span>ới
             </h3>
             <!-- //tittle heading -->
             <div class="row">
@@ -37,15 +38,17 @@
                                                             <div
                                                                 style="height: 250px; vertical-align: middle; display: table-cell;">
                                                                 <div>
+                                                                    @php
+                                                                        $arrayImage = explode(',', $item->image);
+                                                                    @endphp
                                                                     <img class=""
-                                                                        src="{{ asset('assets/uploads/product/' . $item->image) }}"
+                                                                        src="{{ asset('assets/uploads/product/' . $arrayImage[0]) }}"
                                                                         alt="image1">
                                                                 </div>
                                                                 <div class="men-cart-pro">
                                                                     <div class="inner-men-cart-pro">
                                                                         <a href="/category/{{ $item->category->slug }}/{{ $item->slug }}"
-                                                                            class="link-product-add-cart">Quick
-                                                                            View</a>
+                                                                            class="link-product-add-cart">Xem</a>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -55,8 +58,8 @@
                                                                 <a href="/single">{{ $item->name }}</a>
                                                             </h4>
                                                             <div class="info-product-price my-2">
-                                                                <span
-                                                                    class="item_price">${{ $item->selling_price }}</span>
+                                                                <span class="item_price">{{ $item->selling_price }}
+                                                                    đ</span>
                                                                 <del></del>
                                                             </div>
                                                         </div>

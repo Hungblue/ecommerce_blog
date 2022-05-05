@@ -24,12 +24,25 @@ class CategoryController extends Controller
         $category = new Category();
         if($request->hasFile('image'))
         {
+            $files = array();
             $file = $request->file('image');
-            $ext = $file->getClientOriginalExtension();
-            $filename = time() . '.' . $ext;
-            $file->move('assets/uploads/category',$filename);
-            $category->image = $filename;
-        }       
+            $category->image = '';
+            foreach($files as $file)
+            {
+                $size = $file->getSize();
+                $ext = $file->getClientOriginalExtension();
+                $filename = time() . $size . '.' . $ext;
+                $file->move('assets/uploads/category',$filename);
+
+                if($category->image === '')
+                {
+                    $category->image = $filename;
+                }else{
+                    $category->image = $category->image . ',' . $filename;
+                }
+            }
+
+        }
 
         $category->name = $request->input('name');
         $category->slug = $request->input('slug');
@@ -50,24 +63,36 @@ class CategoryController extends Controller
         return view('admin.category.edit', compact('category'));
     }
 
-    public function update(Request $request, $id) 
+    public function update(Request $request, $id)
     {
         $category = Category::findOrFail($id);
-        
+
         if($request->hasFile('image'))
         {
-            $path = 'assets/uploads/category/'.$category->image;
-            if(File::exists($path))
+            $files = $request->file('image');
+            $category->image = '';
+            foreach($files as $file)
             {
-                File::delete($path);
+                $path = 'assets/uploads/category/'.$category->image;
+                if(File::exists($path))
+                {
+                    File::delete($path);
+                }
+                $size = $file->getSize();
+                $ext = $file->getClientOriginalExtension();
+                $filename = time() . $size . '.' . $ext;
+                $file->move('assets/uploads/category',$filename);
+
+                if($category->image === '')
+                {
+                    $category->image = $filename;
+                }else{
+                    $category->image = $category->image . ',' . $filename;
+                }
             }
-            $file = $request->file('image');
-            $ext = $file->getClientOriginalExtension();
-            $filename = time() . '.' . $ext;
-            $file->move('assets/uploads/category',$filename);
-            $category->image = $filename;
+
         }
-    
+
         $category->name = $request->input('name');
         $category->slug = $request->input('slug');
         $category->description = $request->input('description');

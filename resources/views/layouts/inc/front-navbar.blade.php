@@ -2,18 +2,17 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="agileits-navi_search">
-                <form action="search_category" method="GET">
+                {{-- <form action="search_category" method="GET">
                     <select id="agileinfo-nav_search" name="search_category" class="border" required=""
                         onchange="this.form.submit()">
-                        <option value="">All Categories</option>
+                        <option value="">Tất cả danh mục</option>
                         @foreach ($featured_categories as $cate)
                             <li>
                                 <option value="{{ $cate->id }}">{{ $cate->name }}</option>
                             </li>
                         @endforeach
-
                     </select>
-                </form>
+                </form> --}}
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,7 +21,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto text-center mr-xl-5">
                     <li class="nav-item active mr-lg-2 mb-lg-0 mb-2">
-                        <a class="nav-link" href="/">Home
+                        <a class="nav-link" href="/">Trang chủ
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
@@ -32,7 +31,7 @@
                     <li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
-                            Category
+                            Danh mục
                         </a>
                         <div class="dropdown-menu">
                             <div class="agile_inner_drop_nav_info p-4">
@@ -77,10 +76,14 @@
                     </li>
 
                     <li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-                        <a class="nav-link" href="/about">About Us</a>
+                        <a class="nav-link" href="/wishlist">Danh sách yêu thích<span
+                                class="badge badge-pill bg-success text-white wishlist-count">0</span></a>
+                    </li>
+                    <li class="nav-item mr-lg-2 mb-lg-0 mb-2">
+                        <a class="nav-link" href="/about">Về chúng tôi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/contact">Contact Us</a>
+                        <a class="nav-link" href="/contact">Liên hệ</a>
                     </li>
                 </ul>
             </div>

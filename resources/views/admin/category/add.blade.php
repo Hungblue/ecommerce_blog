@@ -11,7 +11,7 @@
       @csrf
       <div class="row">
         <div class="col-md-6 mb-3">
-          <label for="">Name</label>
+          <label for="">Tên</label>
           <input type="text" class="form-control" name="name" placeholder="">
         </div>
         <div class="col-md-6 mb-3">
@@ -19,28 +19,28 @@
           <input type="text" class="form-control" name="slug" placeholder="">
         </div>
         <div class="col-md-12 mb-3">
-          <label for="">Description</label>
+          <label for="">Mô tả</label>
           <textarea class="form-control" row="3" name="description" placeholder=""></textarea>
         </div>
         <div class="col-md-6 mb-3">
-          <label for="">Status</label>
+          <label for="">Trạng thái</label>
           <input type="checkbox" name="status">
         </div>
         <div class="col-md-6 mb-3">
-          <label for="">Popular</label>
+          <label for="">Nổi bật</label>
           <input type="checkbox" name="popular">
         </div>
 
         <div class="col-md-12 mb-3">
-          <label for="">Meta Title</label>
+          <label for="">Tiêu đề phiên bản</label>
           <textarea class="form-control" row="3" name="meta_title"></textarea>
         </div>
         <div class="col-md-12 mb-3">
-          <label for="">Meta Description</label>
+          <label for="">Mô tả phiên bản</label>
           <textarea class="form-control" row="3" name="meta_descrip"></textarea>
         </div>
         <div class="col-md-12 mb-3">
-          <label for="">Meta Keywords</label>
+          <label for="">Từ khóa phiên bản</label>
           <textarea class="form-control" row="3" name="meta_keywords"></textarea>
         </div>
         <div class="col-md-12">
@@ -48,8 +48,8 @@
         </div>
 
         <div class="col-md-12">
-          <button type="submit" class="btn btn-primary">Submit</button>
-          <button class="btn btn-primary" onclick="history.back(-1)">Back</button>
+          <button type="submit" class="btn btn-primary">Nhập</button>
+          <button class="btn btn-primary" onclick="history.back(-1)">Quay lại</button>
         </div>
       </div>
     </form>

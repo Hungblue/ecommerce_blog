@@ -4,9 +4,8 @@
             <!-- logo -->
             <div class="col-md-3 logo_agile">
                 <h1 class="text-center">
-                    <a href="/index" class="font-weight-bold font-italic">
-                        <img src="{{ asset('frontend/images/logo2.png') }}" alt=" " class="img-fluid">Electro
-                        Store
+                    <a href="/" class="font-weight-bold font-italic">
+                        <img src="{{ asset('frontend/images/logo2.png') }}" alt=" " class="img-fluid">May Xanh
                     </a>
                 </h1>
             </div>
@@ -19,7 +18,7 @@
                         <form class="form-inline" action="search" method="GET">
                             <input class="form-control mr-sm-2" name="search" type="search" placeholder="Search"
                                 aria-label="Search" required>
-                            <button class="btn my-2 my-sm-0" type="submit">Search</button>
+                            <button class="btn my-2 my-sm-0" type="submit">Tìm kiếm</button>
                         </form>
                     </div>
                     <!-- //search -->
@@ -35,7 +34,8 @@
             </form> --}}
                             <button class="btn w3view-cart" type="button" name="submit" value=""
                                 onclick="location.href='/cart';">
-                                <i class="fas fa-cart-arrow-down"></i>
+                                <i class="fas fa-cart-arrow-down"></i><span
+                                    class="badge badge-pill bg-success cart-count">0</span>
                             </button>
                         </div>
                     </div>

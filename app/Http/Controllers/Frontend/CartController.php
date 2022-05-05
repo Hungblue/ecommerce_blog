@@ -18,7 +18,6 @@ class CartController extends Controller
 
       if(Auth::check())
       {
-
         $prod_check = Product::where('id', $product_id)->first();
 
         if($prod_check)
@@ -85,5 +84,11 @@ class CartController extends Controller
       {
         return response()->json(['status' => "Login to continue"]);
       }
+    }
+
+    public function cartcount()
+    {
+      $cartcount = Cart::where('user_id', Auth::id())->count();
+      return response()->json(['count'=> $cartcount]);
     }
 }

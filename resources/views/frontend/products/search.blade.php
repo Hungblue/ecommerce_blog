@@ -1,7 +1,7 @@
 @extends('layouts.front')
 
 @section('title')
-    welcome E-Shop
+    Máy Xanh xin chào quý khách
 @endsection
 
 @section('content')
@@ -23,8 +23,7 @@
                                                 <div class="men-cart-pro">
                                                     <div class="inner-men-cart-pro">
                                                         <a href="/category/{{ $item->category->slug }}/{{ $item->slug }}"
-                                                            class="link-product-add-cart">Quick
-                                                            View</a>
+                                                            class="link-product-add-cart">Xem</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -34,8 +33,8 @@
                                                         href="/category/{{ $item->category->slug }}/{{ $item->slug }}">{{ $item->name }}</a>
                                                 </h4>
                                                 <div class="info-product-price my-2">
-                                                    <span class="item_price">${{ $item->selling_price }}</span>
-                                                    <del>${{ $item->original_price }}</del>
+                                                    <span class="item_price">{{ $item->selling_price }} đ</span>
+                                                    <del>{{ $item->original_price }} đ</del>
                                                 </div>
                                             </div>
                                         </div>

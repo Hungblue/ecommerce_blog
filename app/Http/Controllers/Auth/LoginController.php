@@ -44,11 +44,11 @@ class LoginController extends Controller
     {
         if(Auth::user()->role_as == User::ADMIN)
         {
-            return redirect('dashboard')->with('status', 'Welcome to your dashboard');
+            return redirect('dashboard');//->with('status', 'Welcome to your dashboard');
         }
         elseif(Auth::user()->role_as == User::USER)
         {
-            return redirect('/')->with('status', 'Logged in successfully');
+            return redirect('/');//->with('status', 'Logged in successfully');
         }
     }
 }

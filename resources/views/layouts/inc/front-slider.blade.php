@@ -12,13 +12,13 @@
       <div class="container">
         <div class="w3l-space-banner">
           <div class="carousel-caption p-lg-5 p-sm-4 p-3">
-            <p>Get flat
-              <span>10%</span> Cashback</p>
-            <h3 class="font-weight-bold pt-2 pb-lg-5 pb-4">The
-              <span>Big</span>
-              Sale
+            <p>Hoàn lại
+              <span>10%</span> Hoàn lại tiền</p>
+            <h3 class="font-weight-bold pt-2 pb-lg-5 pb-4">Đợt
+              <span>Giảm giá</span>
+              Lớn
             </h3>
-            <a class="button2" href="/product">Shop Now </a>
+            <a class="button2" href="/product">Mua ngay </a>
           </div>
         </div>
       </div>
@@ -27,12 +27,12 @@
       <div class="container">
         <div class="w3l-space-banner">
           <div class="carousel-caption p-lg-5 p-sm-4 p-3">
-            <p>advanced
-              <span>Wireless</span> earbuds</p>
-            <h3 class="font-weight-bold pt-2 pb-lg-5 pb-4">Best
-              <span>Headphone</span>
+            <p>Lựa chọn thêm
+              <span>Wireless</span> tai nghe</p>
+            <h3 class="font-weight-bold pt-2 pb-lg-5 pb-4">
+              <span>Tai nghe</span>tốt nhất
             </h3>
-            <a class="button2" href="/product">Shop Now </a>
+            <a class="button2" href="/product">Mua ngay</a>
           </div>
         </div>
       </div>
@@ -41,12 +41,12 @@
       <div class="container">
         <div class="w3l-space-banner">
           <div class="carousel-caption p-lg-5 p-sm-4 p-3">
-            <p>Get flat
-              <span>10%</span> Cashback</p>
-            <h3 class="font-weight-bold pt-2 pb-lg-5 pb-4">New
-              <span>Standard</span>
+            <p>Hoàn lại
+              <span>10%</span> Hoàn lại tiền</p>
+            <h3 class="font-weight-bold pt-2 pb-lg-5 pb-4">
+              <span>Hàng</span>mới
             </h3>
-            <a class="button2" href="/product">Shop Now </a>
+            <a class="button2" href="/product">Mua ngay </a>
           </div>
         </div>
       </div>
@@ -55,12 +55,12 @@
       <div class="container">
         <div class="w3l-space-banner">
           <div class="carousel-caption p-lg-5 p-sm-4 p-3">
-            <p>Get Now
-              <span>40%</span> Discount</p>
-            <h3 class="font-weight-bold pt-2 pb-lg-5 pb-4">Today
-              <span>Discount</span>
+            <p>Mua ngay
+              <span>40%</span> Giảm giá</p>
+            <h3 class="font-weight-bold pt-2 pb-lg-5 pb-4">
+              <span>Giảm giá</span>trong ngày
             </h3>
-            <a class="button2" href="/product">Shop Now </a>
+            <a class="button2" href="/product">Mua ngay </a>
           </div>
         </div>
       </div>
@@ -68,11 +68,11 @@
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
+    <span class="sr-only">Trước</span>
   </a>
   <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
+    <span class="sr-only">Sau</span>
   </a>
 </div>
 <!-- //banner -->

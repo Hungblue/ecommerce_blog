@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Models\Rating;
+use App\Models\Review;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class FrontendController extends Controller
 {
@@ -51,7 +54,18 @@ class FrontendController extends Controller
         {
           $featured_categories = Category::where('status', '1')->get();
           $product = Product::where('slug', $product_slug)->first();
-          return view('frontend.products.view', compact('product', 'featured_categories'));
+          $ratings = Rating::where('product_id', $product->id)->get();
+          $rating_sum = Rating::where('product_id', $product->id)->sum('stars_rated');
+          $user_rating = Rating::where('product_id', $product->id)->where('user_id', Auth::id())->first();
+          $reviews = Review::where('product_id', $product->id)->get();
+
+          if ($ratings->count() > 0){
+              $rating_value = $rating_sum/$ratings->count();
+          }
+          else{
+              $rating_value = 0;
+          }
+          return view('frontend.products.view', compact('product', 'ratings','rating_value','user_rating', 'reviews', 'featured_categories'));
         }
         else{
           return redirect('/')->with('status', 'The link was broken');

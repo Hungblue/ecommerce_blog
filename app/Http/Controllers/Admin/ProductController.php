@@ -25,14 +25,28 @@ class ProductController extends Controller
     {
 
         $product = new Product();
+
         //$product = $request->input();
         if($request->hasFile('image'))
         {
-            $file = $request->file('image');
-            $ext = $file->getClientOriginalExtension();
-            $filename = time() . '.' . $ext;
-            $file->move('assets/uploads/product',$filename);
-            $product->image = $filename;
+            $files = array();
+            $files = $request->file('image');
+            $product->image = '';
+            //dd($files);
+            foreach($files as $file)
+            {
+                $size = $file->getSize();
+                $ext = $file->getClientOriginalExtension();
+                $filename = time() . $size . '.' . $ext;
+                $file->move('assets/uploads/product',$filename);
+                if($product->image === '')
+                {
+                  $product->image = $filename;
+                }else
+                {
+                  $product->image = $product->image . ',' . $filename;
+                }
+            }
         }
         $product->cate_id = $request->input('cate_id');
         $product->name = $request->input('name');
@@ -49,7 +63,7 @@ class ProductController extends Controller
         $product->meta_descrip = $request->input('meta_descrip');
         $product->meta_keywords = $request->input('meta_keywords');
         $product->save();
-        
+
 
         return redirect('/products')->with('status', "Product Added Successfully");
     }
@@ -66,16 +80,27 @@ class ProductController extends Controller
 
         if($request->hasFile('image'))
         {
-            $path = 'assets/uploads/product/'.$product->image;
-            if(File::exists($path))
+            $files = $request->file('image');
+            $product->image = '';
+            foreach($files as $file)
             {
-                File::delete($path);
+                $path = 'assets/uploads/product/'.$file->getClientOriginalName();
+                if(File::exists($path))
+                {
+                    File::delete($path);
+                }
+                $size = $file->getSize();
+                $ext = $file->getClientOriginalExtension();
+                $filename = time() . $size . '.' . $ext;
+                $file->move('assets/uploads/product',$filename);
+                if($product->image === '')
+                {
+                  $product->image = $filename;
+                }else
+                {
+                  $product->image = $product->image . ',' . $filename;
+                }
             }
-            $file = $request->file('image');
-            $ext = $file->getClientOriginalExtension();
-            $filename = time() . '.' . $ext;
-            $file->move('assets/uploads/product',$filename);
-            $product->image = $filename;
         }
 
         $product->cate_id = $request->input('cate_id');
@@ -100,12 +125,16 @@ class ProductController extends Controller
     public function delete($id)
     {
         $product = Product::findOrFail($id);
-        $path = 'assets/uploads/product/'.$product->image;
-        if(File::exists($path))
+        $arrayImage = explode(',', $product->image);
+        foreach ($arrayImage as $image)
         {
-            File::delete($path);
-        }
+            $path = 'assets/uploads/product/'.$image;
+            if(File::exists($path))
+            {
+                File::delete($path);
+            }
         $product->delete();
+        }
         return redirect('/products');
     }
 }

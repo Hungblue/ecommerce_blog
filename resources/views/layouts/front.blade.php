@@ -1,3 +1,7 @@
+<?php
+date_default_timezone_set('Asia/Ho_Chi_Minh');
+?>
+
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -27,6 +31,9 @@
     <!-- custom -->
     <!-- Custom-Files -->
     <link href="{{ asset('frontend/css/bootstrap.css') }}" rel="stylesheet" type="text/css" media="all" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- Bootstrap css -->
     <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet" type="text/css" media="all" />
     <!-- Main css -->
@@ -67,24 +74,51 @@
         </main>
     </div>
 
+    <div class="whatsapp-chat">
+        <a href="https://wa.me/+84353090996?text=I'm%20interested%20in%20your%20car%20for%20sale" target="_blank">
+            <img src="{{ asset('assets/images/WhatsApp_icon.png') }}" alt="Whatsapp-logo" height="80px" width="80px">
+        </a>
+    </div>
+
     @include('layouts.inc.front-footer')
     @include('layouts.inc.front-copy-right')
 
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     @if (session('status'))
         <script>
             swal("{{ session('status') }}");
         </script>
     @endif
 
-    <script src="{{ asset('frontend/js/bootstrap.bundle.min.js') }}"></script>
+    {{-- <script src="{{ asset('frontend/js/bootstrap.bundle.min.js') }}"></script> --}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
     {{-- <script src="{{ asset('frontend/js/jquery-2.2.3.min.js') }}"></script> --}}
     <script src="{{ asset('frontend/js/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ asset('frontend/js/jquery-2.2.3.min.js') }}"></script>
     <script src="{{ asset('frontend/js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('frontend/js/cart.js') }}"></script>
+    <script src="{{ asset('frontend/js/checkout.js') }}"></script>
 
 
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {},
+            Tawk_LoadStart = new Date();
+        (function() {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/621482901ffac05b1d7b0c5e/1fsg1s1a7';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
 
     <!-- //jquery -->
 
@@ -218,6 +252,25 @@
     <!-- //js-files -->
 
     @yield('scripts')
+    {{-- --------------------------------------------------- --}}
+
+    <!-- imagezoom -->
+    <script src="{{ asset('frontend/js/imagezoom.js') }}"></script>
+    <!-- //imagezoom -->
+    <!-- flexslider -->
+    <link rel="stylesheet" href="{{ asset('frontend/css/flexslider.css') }}" type="text/css" media="screen" />
+
+    <script src="{{ asset('frontend/js/jquery.flexslider.js') }}"></script>
+    <script>
+        // Can also be used with $(document).ready()
+        $(window).load(function() {
+            $('.flexslider').flexslider({
+                animation: "slide",
+                controlNav: "thumbnails"
+            });
+        });
+    </script>
+    <!-- //FlexSlider-->
 </body>
 
 </html>
