@@ -24,6 +24,7 @@ use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\Frontend\WishListController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Admin\FrontendController as AdminFrontendController;
+use App\Http\Controllers\Repository\SiteController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
 
@@ -57,7 +58,6 @@ Auth::routes();
   Route::get('/load-cart-data', [CartController::class, 'cartcount']);
   Route::get('/load-wishlist-data', [WishListController::class, 'wishlistcount']);
 
-  // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
   Route::post('add-to-cart', [CartController::class, 'addProduct']);
   Route::post('delete-cart-item', [CartController::class, 'deleteProduct']);
@@ -67,7 +67,7 @@ Auth::routes();
   Route::post('delete-wishlist-item', [WishListController::class, 'deleteitem']);
 
 
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth'])->group(function () {
   Route::get('cart', [CartController::class, 'viewcart']);
   Route::get('checkout', [CheckoutController::class, 'index']);
   Route::post('place-order', [CheckoutController::class, 'placeOrder']);
@@ -129,23 +129,27 @@ Route::middleware(['auth','isAdmin'])->group(function () {
 
 });
 
-Auth::routes(['verify' => true]);
+// Auth::routes(['verify' => true]);
 
-Route::get('/email/verify', function () {
-    return view('auth.verify');
-})->middleware('auth')->name('verification.notice');
+// Route::get('/email/verify', function () {
+//     return view('auth.verify');
+// })->middleware('auth')->name('verification.notice');
 
-Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
-    $request->fulfill();
+// Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+//     $request->fulfill();
 
-    return redirect('/home');
-})->middleware(['auth', 'signed'])->name('verification.verify');
+//     return redirect('/home');
+// })->middleware(['auth', 'signed'])->name('verification.verify');
 
-Route::post('/email/verification-notification', function (Request $request) {
-    $request->user()->sendEmailVerificationNotification();
+// Route::post('/email/verification-notification', function (Request $request) {
+//     $request->user()->sendEmailVerificationNotification();
 
-    return back()->with('message', 'Verification link sent!');
-})->middleware(['auth', 'throttle:6,1'])->name('verification.send');
+//     return back()->with('message', 'Verification link sent!');
+// })->middleware(['auth', 'throttle:6,1'])->name('verification.send');
+
+
+Route::get('/repository', [SiteController::class, 'getSite']);
+Route::get('/repository2', [SiteController::class, 'getProduct']);
 //     Route::get('send-mail', function () {
 
 //     $details = [
